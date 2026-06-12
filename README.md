@@ -31,6 +31,7 @@ Polls public job-board feeds for internship-related titles, remembers what you h
 cd /path/to/job
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
+.venv/bin/playwright install chromium
 cp config.example.json config.json   # optional; repo already has config.json
 nano .env                             # add TELEGRAM_* as above
 .venv/bin/python main.py --once     # one poll, then exit
@@ -60,7 +61,7 @@ Short version:
 2. Security list: allow **TCP 22** from **your IP /32** (avoid `0.0.0.0/0` unless you know the risk).
 3. SSH in as **`ubuntu`** (Ubuntu image) or **`opc`** (Oracle Linux).
 4. Install `python3`, `python3-venv`, `git`, copy the project (`rsync` or `git clone`).
-5. On the VM: `python3 -m venv .venv`, `pip install -r requirements.txt`, create **`~/job/.env`** with the same Telegram variables as locally.
+5. On the VM: `python3 -m venv .venv`, `pip install -r requirements.txt`, **`playwright install chromium`**, and on Linux **`sudo playwright install-deps`** (system libraries for headless Chrome). Create **`~/job/.env`** with the same Telegram variables as locally.
 6. Test: `cd ~/job && .venv/bin/python main.py --once`
 7. Install systemd:
 
@@ -92,19 +93,39 @@ The bundled unit file sets **`PYTHONUNBUFFERED=1`** so log lines from Python sho
 
 ## Companies included (current `config.json`)
 
-These **56** sources are polled (name as shown in notifications):
+**171** employers are polled (Meta, Apple, Tesla, Coinbase, and many more via Playwright/Phenom/Workday/Greenhouse, etc.). Regenerate the list from config:
 
-**All tracked employers (56):** Microsoft · Google · Netflix · Amazon · **Oracle** · NVIDIA · Salesforce · Adobe · Workday · BlackRock · Leidos · Boston Dynamics · Booz Allen Hamilton · Morgan Stanley · Capital One · LinkedIn · Uber · Lyft · Twitter / X · Pinterest · Dropbox · ServiceNow · SpaceX · Waymo · Zoox · Nuro · Stripe · Robinhood · Affirm · Chime · Plaid · Brex · Ramp · Jane Street · Optiver · Virtu Financial · Anthropic · OpenAI · Scale AI · Cohere · Mistral AI · Perplexity AI · xAI · Codeium / Windsurf · Anduril · Palantir · Notion · Linear · Vercel · Airtable · Figma · Amplitude · Datadog · Snowflake · Databricks · Hugging Face
+```bash
+.venv/bin/python -c "import json; print(len(json.load(open('config.json'))['sources']), 'sources')"
+```
 
-**Feed types in use:** PCSX / Eightfold-style (`microsoft`, `pcsx`), `google_careers`, `amazon`, `oracle_careers`, `workday`, `greenhouse`, `lever`, `ashby`, `smartrecruiters`, `workable` (Hugging Face via `apply.workable.com/.../jobs.md`).
-
----
-
-## Not in this repo’s config
-
-Employers without a verified public feed in this watcher (e.g. Meta, Apple, Tesla, Coinbase on their current ATS) are omitted until a concrete API URL and parser exist. See past discussion in the project chat for why.
+**Feed types in use:** `greenhouse`, `workday`, `ashby`, `lever`, `smartrecruiters`, `pcsx`, `oracle_careers`, `phenom`, `playwright`, `avature`, `successfactors`, `amazon`, `google_careers`, `workable`, `valve`, `usajobs`, `bofa`.
 
 ---
+
+## Intern Tracker webapp (optional)
+
+Companion UI for marking companies applied, calendar deadlines, and Telegram sync.
+
+| What | Where |
+|------|-------|
+| **Live app** | https://webapp-two-peach.vercel.app |
+| **Source** | https://github.com/nehanataraj/internship-notifs |
+
+Use the **same** `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in the webapp Settings as in this repo's `.env`.
+
+**One-time pin bootstrap** (creates the `JTRACK::` pinned message the watcher and webapp share):
+
+```bash
+.venv/bin/python scripts/bootstrap_pinned.py
+```
+
+**Regenerate `companies.json`** for the webapp repo:
+
+```bash
+.venv/bin/python scripts/build_webapp_data.py
+# copy output into internship-notifs repo if you maintain your own fork
+```
 
 ## License / ops
 
