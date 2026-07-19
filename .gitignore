@@ -1,6 +1,7 @@
 .env
 state.db
 .venv/
+.compare-*/
 __pycache__/
 *.pyc
 .python-version

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Intel WD",
+    "type": "workday",
+    "host": "https://intel.wd1.myworkdayjobs.com",
+    "tenant": "intel",
+    "site": "External",
+    "search_text": "intern",
+    "count": 359
+  },
+  {
+    "name": "Target",
+    "type": "workday",
+    "host": "https://target.wd5.myworkdayjobs.com",
+    "tenant": "target",
+    "site": "targetcareers",
+    "search_text": "intern",
+    "count": 196
+  },
+  {
+    "name": "Etsy",
+    "type": "workday",
+    "host": "https://etsy.wd5.myworkdayjobs.com",
+    "tenant": "etsy",
+    "site": "Etsy_Careers",
+    "search_text": "intern",
+    "count": 20
+  },
+  {
+    "name": "Micron",
+    "type": "workday",
+    "host": "https://micron.wd1.myworkdayjobs.com",
+    "tenant": "micron",
+    "site": "External",
+    "search_text": "intern",
+    "count": 2811
+  },
+  {
+    "name": "Miro",
+    "type": "ashby",
+    "board_slug": "miro",
+    "count": 35
+  },
+  {
+    "name": "Sentry",
+    "type": "ashby",
+    "board_slug": "sentry",
+    "count": 49
+  },
+  {
+    "name": "Cerebras",
+    "type": "ashby",
+    "board_slug": "cerebras",
+    "count": 107
+  },
+  {
+    "name": "Character.AI",
+    "type": "ashby",
+    "board_slug": "character",
+    "count": 16
+  }
+]
