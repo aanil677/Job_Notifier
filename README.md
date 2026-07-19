@@ -93,7 +93,7 @@ The bundled unit file sets **`PYTHONUNBUFFERED=1`** so log lines from Python sho
 
 ## Companies included (current `config.json`)
 
-**270** employers are polled (Meta, Apple, Tesla, Coinbase, GitLab, Toast, and many more via Playwright/Phenom/Workday/Greenhouse/Ashby, etc.). Regenerate the list from config:
+**300** employers are polled (Meta, Apple, Tesla, Coinbase, GitLab, Toast, Autodesk, and many more via Playwright/Phenom/Workday/Greenhouse/Ashby, etc.). Regenerate the list from config:
 
 ```bash
 .venv/bin/python -c "import json; print(len(json.load(open('config.json'))['sources']), 'sources')"

@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Applied Materials",
+    "type": "workday",
+    "host": "https://amat.wd1.myworkdayjobs.com",
+    "tenant": "amat",
+    "site": "External",
+    "search_text": "intern",
+    "count": 1295
+  },
+  {
+    "name": "Autodesk",
+    "type": "workday",
+    "host": "https://autodesk.wd1.myworkdayjobs.com",
+    "tenant": "autodesk",
+    "site": "Ext",
+    "search_text": "intern",
+    "count": 557
+  },
+  {
+    "name": "Pure Storage",
+    "type": "greenhouse",
+    "count": 330,
+    "board_token": "purestorage"
+  },
+  {
+    "name": "Sezzle",
+    "type": "greenhouse",
+    "count": 185,
+    "board_token": "sezzle"
+  },
+  {
+    "name": "Workato",
+    "type": "greenhouse",
+    "count": 162,
+    "board_token": "workato"
+  },
+  {
+    "name": "Netskope",
+    "type": "greenhouse",
+    "count": 143,
+    "board_token": "netskope"
+  },
+  {
+    "name": "Ripple",
+    "type": "greenhouse",
+    "count": 140,
+    "board_token": "ripple"
+  },
+  {
+    "name": "Moderna",
+    "type": "workday",
+    "host": "https://modernatx.wd1.myworkdayjobs.com",
+    "tenant": "modernatx",
+    "site": "M_tx",
+    "search_text": "intern",
+    "count": 115
+  },
+  {
+    "name": "Upstart",
+    "type": "greenhouse",
+    "count": 107,
+    "board_token": "upstart"
+  },
+  {
+    "name": "Broadcom",
+    "type": "workday",
+    "host": "https://broadcom.wd1.myworkdayjobs.com",
+    "tenant": "broadcom",
+    "site": "External_Career",
+    "search_text": "intern",
+    "count": 102
+  },
+  {
+    "name": "Smartsheet",
+    "type": "greenhouse",
+    "count": 101,
+    "board_token": "smartsheet"
+  },
+  {
+    "name": "Tower Research",
+    "type": "greenhouse",
+    "count": 79,
+    "board_token": "towerresearchcapital"
+  },
+  {
+    "name": "New Relic",
+    "type": "greenhouse",
+    "count": 68,
+    "board_token": "newrelic"
+  },
+  {
+    "name": "Qualtrics",
+    "type": "greenhouse",
+    "count": 58,
+    "board_token": "qualtrics"
+  },
+  {
+    "name": "Zillow",
+    "type": "workday",
+    "host": "https://zillow.wd5.myworkdayjobs.com",
+    "tenant": "zillow",
+    "site": "Zillow_Group_External",
+    "search_text": "intern",
+    "count": 48
+  },
+  {
+    "name": "Ping Identity",
+    "type": "greenhouse",
+    "count": 44,
+    "board_token": "pingidentity"
+  },
+  {
+    "name": "BeyondTrust",
+    "type": "greenhouse",
+    "count": 40,
+    "board_token": "beyondtrust"
+  },
+  {
+    "name": "BitGo",
+    "type": "greenhouse",
+    "count": 37,
+    "board_token": "bitgo"
+  },
+  {
+    "name": "Gemini",
+    "type": "greenhouse",
+    "count": 35,
+    "board_token": "gemini"
+  },
+  {
+    "name": "n8n",
+    "type": "ashby",
+    "count": 34,
+    "board_slug": "n8n"
+  },
+  {
+    "name": "Sumo Logic",
+    "type": "greenhouse",
+    "count": 23,
+    "board_token": "sumologic"
+  },
+  {
+    "name": "Dashlane",
+    "type": "greenhouse",
+    "count": 22,
+    "board_token": "dashlane"
+  },
+  {
+    "name": "Incident.io",
+    "type": "ashby",
+    "count": 20,
+    "board_slug": "incident"
+  },
+  {
+    "name": "Gorgias",
+    "type": "ashby",
+    "count": 19,
+    "board_slug": "gorgias"
+  },
+  {
+    "name": "Zapier",
+    "type": "ashby",
+    "count": 17,
+    "board_slug": "zapier"
+  },
+  {
+    "name": "Coder",
+    "type": "ashby",
+    "count": 16,
+    "board_slug": "coder"
+  },
+  {
+    "name": "Jellyfish",
+    "type": "ashby",
+    "count": 14,
+    "board_slug": "jellyfish"
+  },
+  {
+    "name": "Bitwarden",
+    "type": "greenhouse",
+    "count": 12,
+    "board_token": "bitwarden"
+  },
+  {
+    "name": "Bubble",
+    "type": "ashby",
+    "count": 12,
+    "board_slug": "bubble"
+  },
+  {
+    "name": "Uniswap Labs",
+    "type": "ashby",
+    "count": 10,
+    "board_slug": "uniswap"
+  }
+]
